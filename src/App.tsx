@@ -57,7 +57,11 @@ import html2canvas from 'html2canvas';
 import * as pdfjsLib from 'pdfjs-dist';
 
 // Set up pdfjs worker using unpkg for reliability
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+try {
+  pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+} catch (e) {
+  console.error('Failed to set up pdfjs worker:', e);
+}
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

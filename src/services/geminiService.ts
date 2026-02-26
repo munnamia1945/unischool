@@ -1,6 +1,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "";
+if (!apiKey) {
+  console.warn('Gemini API Key is missing. AI features will not work.');
+}
+const ai = new GoogleGenAI({ apiKey });
 
 export const explainConcept = async (concept: string) => {
   const response = await ai.models.generateContent({
