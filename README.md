@@ -8,6 +8,7 @@ UniSchool হলো একটি আধুনিক AI-চালিত লার
 ## ✨ Features
 * **AI-Powered Tutoring:** যেকোনো বিষয়ের প্রশ্নের তাৎক্ষণিক উত্তর।
 * **Smart Study Companion:** আপনার পড়াশোনার গতি ও ধরণ অনুযায়ী সাজেশন প্রদান।
+* **Scientific Research Reviewer:** রিসার্চ পেপার বিশ্লেষণ করে সরাসরি LaTeX ফরম্যাটে ফরমাল রিভিউ এবং Key Findings তৈরি করা।
 * **Seamless Integration:** Supabase ডেটাবেস এবং Vite-এর মাধ্যমে দ্রুততর পারফরম্যান্স।
 
 ## 🛠️ Tech Stack
